@@ -72,7 +72,7 @@ static const struct arg args[] = {
     { run_command, "  %s RPM", "sensors | grep 'Fan' | awk 'NR==1{print $3}'"},
 	{ cpu_perc, "  %s", NULL },
     // remove Gi from the output of ram_used
-	{ ram_used, " 󰒋 %s", NULL},
+	{ ram_used, "  %s", NULL},
     { battery_perc, "   %s", "BAT0"},
     // todo make a battery_state function
     { ipv4, "   %s", "wlp3s0"},
