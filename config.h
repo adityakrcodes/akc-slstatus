@@ -65,6 +65,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
+    { run_command, "WLD: %s", "wldprice"},
     { netspeed_tx, "  %s", "wlp3s0"},
     { netspeed_rx, "  %s", "wlp3s0"},
     { run_command, "  %s", "pamixer --get-volume-human"},
@@ -72,7 +73,7 @@ static const struct arg args[] = {
     { run_command, "  %s RPM", "sensors | grep 'Fan' | awk 'NR==1{print $3}'"},
 	{ cpu_perc, "  %s", NULL },
     // remove Gi from the output of ram_used
-	{ ram_used, " 󰒋 %s", NULL},
+	{ ram_used, "  %s", NULL},
     { battery_perc, "   %s", "BAT0"},
     // todo make a battery_state function
     { ipv4, "   %s", "wlp3s0"},
